@@ -1,9 +1,9 @@
-let friends_online = [
+const friends_online = [
   { name: "Apollon", key: "1", img: "apollon" },
   { name: "Root", key: "2", img: "root" },
   { name: "Георгий Герасимов", key: "3", img: "geo" },
 ];
-let friends_offline = [{ name: "Денис Свистун", key: "4", img: "svist" }];
+const friends_offline = [{ name: "Денис Свистун", key: "4", img: "svist" }];
 
 function set_online() {
   friends_online.map((obj) => {

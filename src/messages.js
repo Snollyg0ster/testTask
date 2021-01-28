@@ -27,4 +27,5 @@ function message_creation(text) {
 
 function first_message() {
   message_creation("Всем привет, давно не писал сюда! :)");
+  message_creation("Чем занимаетесь?");
 }

@@ -5,11 +5,19 @@
   color: black;
 }
 
+#panel {
+  max-width: 60px;
+  background-color: #222;
+}
 #servers {
   overflow-y: auto;
   overflow-x: hidden;
-  width: 60px;
+  max-width: 60px;
+  height: 80%;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #222;
   color: white;
 }
@@ -36,13 +44,15 @@
   box-shadow: none;
   color: white;
   font-weight: bold;
-  outline-width: 1px;
+  outline-width: 0;
 }
 
 #channels {
   width: 200px;
-  height: auto;
+  max-height: 100%;
   padding: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: #333;
   color: white;
 }
@@ -96,6 +106,7 @@
 
 .input-group {
   display: flex;
+  justify-content: space-between;
 }
 
 #input {
@@ -105,6 +116,9 @@
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   color: white;
+  border: 0;
+  padding-left: 10px;
+  margin-right: 10px;
 }
 
 input::placeholder {
@@ -119,6 +133,9 @@ input::placeholder {
   outline-width: 0;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+  border-left: 1px;
+  border-top: 0;
+  padding-right: 10px;
 }
 
 .img {
@@ -146,21 +163,74 @@ input::placeholder {
 .channel_button {
   background-color: #444;
   color: gray;
-  outline-width: 0px;
   border-radius: 7px;
   max-height: 30;
+  border-left: 1px;
+  border-top: 0;
+  border-color: #999 !important;
+  outline-width: 0 !important;
 }
 
 .input_channel {
-  width: 135px;
+  width: 130px;
+  margin-right: 5px;
+  padding-left: 6px;
   background-color: #444;
   outline-width: 0;
   border-radius: 7px;
   color: white;
+  border: 0;
+  border-color: #444;
 }
 
 .input_channel::placeholder {
   color: gray;
   font-size: 0.9em;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#invite_button {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #7188dc;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  outline-width: 0;
+  box-shadow: none;
+  border-color: #7188dc;
+}
+
+#search {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  background-color: #444;
+  outline-width: 0;
+  border-radius: 7px;
+  color: white;
+  border: 0;
+  border-color: #444;
+}
+
+#menu_button {
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  outline-width: 0 !important;
+  border-top: 0;
+  border-left: 0;
+  margin-left: 6px;
+  margin-top: 5px;
+}
+
+#settings_button {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  margin-top: 35px;
+  outline-width: 0 !important;
+  padding-right: 6px;
+  border-top: 0;
+  border-left: 0;
 }
