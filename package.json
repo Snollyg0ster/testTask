@@ -1,0 +1,15 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Snolly",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.11.2",
+    "electron": "^11.2.1"
+  }
+}
