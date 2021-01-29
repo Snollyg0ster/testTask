@@ -1,8 +1,22 @@
-#container {
-  display: flex;
+#elements {
   min-height: 100vh;
   max-height: 100vh;
+  overflow: hidden;
+}
+
+#container1 {
+  max-height: 20px;
+  background-color: #1a1a1d;
+  -webkit-app-region: drag;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#container2 {
+  display: flex;
   color: black;
+  min-height: 97.4vh;
+  max-height: 97.4vh;
 }
 
 #panel {
@@ -48,7 +62,7 @@
 }
 
 #channels {
-  width: 200px;
+  min-width: 200px;
   max-height: 100%;
   padding: 15px;
   overflow-y: auto;
@@ -96,7 +110,7 @@
 }
 
 #members {
-  width: 200px;
+  min-width: 200px;
   float: right;
   height: auto;
   padding: 15px;
@@ -105,6 +119,7 @@
 }
 
 .input-group {
+  min-width: 300px;
   display: flex;
   justify-content: space-between;
 }
@@ -233,4 +248,21 @@ input::placeholder {
   padding-right: 6px;
   border-top: 0;
   border-left: 0;
+}
+
+#button_group {
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+
+.nav {
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 20px;
+  width: 30px;
+  padding-bottom: 5px;
+  vertical-align: center;
+  outline-width: 0 !important;
+  border: 0;
+  background-color: transparent;
 }

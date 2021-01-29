@@ -15,110 +15,125 @@
     />
   </head>
   <body>
-    <div id="container">
-      <div id="panel">
-        <button id="menu_button"><img src="img/menu.png" /></button>
-        <div id="servers">
-          <div id="images">
-            <img class="img" src="img/server.png" />
-            <img class="img" src="img/server.png" />
-            <img class="img" src="img/server.png" />
-          </div>
-          <button id="server_add" onclick="server_creation()">+</button>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <button id="settings_button">
-            <img src="img/settings.png" max-width="48" max-height="48" />
+    <div id="elements">
+      <div id="container1">
+        <div id="button_group">
+          <button class="nav" onclick="minimize()">
+            <img src="img/minimize.png" />>
+          </button>
+          <button class="nav" onclick="maximize()">
+            <img src="img/maximize.png" />>
+          </button>
+          <button class="nav" onclick="closing()">
+            <img src="img/close.png" />>
           </button>
         </div>
       </div>
-
-      <div id="channels">
-        <div>
-          <div>Голосовые каналы:</div>
-          <div
-            id="voice_box"
-            style="display: flex; flex-direction: column"
-          ></div>
-          <div style="display: flex; margin-top: 15px; margin-bottom: 50px">
-            <input
-              type="text"
-              class="input_channel"
-              id="input1"
-              placeholder="Добавить"
-            />
-            <button
-              class="channel_button"
-              id="voice_add"
-              onclick="voice_channel_creation()"
-            >
-              OK
+      <div id="container2">
+        <div id="panel">
+          <button id="menu_button"><img src="img/menu.png" /></button>
+          <div id="servers">
+            <div id="images">
+              <img class="img" src="img/server.png" />
+              <img class="img" src="img/server.png" />
+              <img class="img" src="img/server.png" />
+            </div>
+            <button id="server_add" onclick="server_creation()">+</button>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <button id="settings_button">
+              <img src="img/settings.png" max-width="48" max-height="48" />
             </button>
           </div>
         </div>
-        <div>
-          <div>Текстовые каналы:</div>
-          <div
-            id="chat_box"
-            style="display: flex; flex-direction: column"
-          ></div>
-          <div style="display: flex; margin-top: 15px; margin-bottom: 50px">
-            <input
-              type="text"
-              class="input_channel"
-              id="input2"
-              placeholder="Добавить"
-            />
-            <button
-              class="channel_button"
-              id="chat_add"
-              onclick="chat_creation()"
-            >
-              OK
-            </button>
+
+        <div id="channels">
+          <div>
+            <div>Голосовые каналы:</div>
+            <div
+              id="voice_box"
+              style="display: flex; flex-direction: column"
+            ></div>
+            <div style="display: flex; margin-top: 15px; margin-bottom: 50px">
+              <input
+                type="text"
+                class="input_channel"
+                id="input1"
+                placeholder="Добавить"
+              />
+              <button
+                class="channel_button"
+                id="voice_add"
+                onclick="voice_channel_creation()"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+          <div>
+            <div>Текстовые каналы:</div>
+            <div
+              id="chat_box"
+              style="display: flex; flex-direction: column"
+            ></div>
+            <div style="display: flex; margin-top: 15px; margin-bottom: 50px">
+              <input
+                type="text"
+                class="input_channel"
+                id="input2"
+                placeholder="Добавить"
+              />
+              <button
+                class="channel_button"
+                id="chat_add"
+                onclick="chat_creation()"
+              >
+                OK
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="chat">
-        <div class="input-group">
-          <input type="text" id="input" placeholder="Написать" />
-          <button id="chat-button" onclick="message_creation()" type="button">
-            Отправить
+        <div id="chat">
+          <div class="input-group">
+            <input type="text" id="input" placeholder="Написать" />
+            <button id="chat-button" onclick="message_creation()" type="button">
+              Отправить
+            </button>
+          </div>
+          <div
+            id="message_box"
+            style="display: flex; flex-direction: column"
+          ></div>
+        </div>
+
+        <div id="members">
+          <input type="text" id="search" placeholder="Поиск" />
+          <div style="display: flex; align-items: center">
+            <div style="color: gray; padding-right: 10px">В сети</div>
+            <img src="img/online.png" height="10px" />
+          </div>
+          <div id="fonline"></div>
+          <div style="display: flex; align-items: center; margin-top: 20px">
+            <div style="color: gray; padding-right: 10px">Не в сети</div>
+            <img src="img/offline.png" height="10px" />
+          </div>
+          <div id="foffline"></div>
+          <button type="button" id="invite_button" style="margin-top: 20px">
+            Пригласить людей
           </button>
         </div>
-        <div
-          id="message_box"
-          style="display: flex; flex-direction: column"
-        ></div>
-      </div>
-
-      <div id="members">
-        <input type="text" id="search" placeholder="Поиск" />
-        <div style="display: flex; align-items: center">
-          <div style="color: gray; padding-right: 10px">В сети</div>
-          <img src="img/online.png" height="10px" />
-        </div>
-        <div id="fonline"></div>
-        <div style="display: flex; align-items: center; margin-top: 20px">
-          <div style="color: gray; padding-right: 10px">Не в сети</div>
-          <img src="img/offline.png" height="10px" />
-        </div>
-        <div id="foffline"></div>
-        <button type="button" id="invite_button" style="margin-top: 20px">
-          Пригласить людей
-        </button>
       </div>
     </div>
-
     <script>
       require("./renderer.js");
     </script>
-    <script src="./src/servers.js" ;></script>
-    <script src="./src/messages.js" ;></script>
-    <script src="./src/voiceChats.js" ;></script>
-    <script src="./src/textChannels.js" ;></script>
-    <script src="./src/friends.js" ;></script>
+    <script src="./src/servers.js"></script>
+    <script src="./src/messages.js"></script>
+    <script src="./src/voiceChats.js"></script>
+    <script src="./src/textChannels.js"></script>
+    <script src="./src/friends.js"></script>
+    <script src="./src/toolbar.js"></script>
     <script>
       first_message();
       first_voice();

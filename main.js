@@ -1,17 +1,20 @@
 const path = require("path");
 const url = require("url");
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 
 let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 700,
-    height: 500,
+    width: 1000,
+    height: 700,
     icon: __dirname + "/img/icon.png",
     webPreferences: {
       nodeIntegration: true,
+      enableRemoteModule: true,
     },
+    frame: false,
+    titleBarStyle: "hidden",
   });
 
   win.loadURL(
@@ -21,8 +24,6 @@ function createWindow() {
       slashes: true,
     })
   );
-
-  win.webContents.openDevTools();
 
   win.on("closed", () => {
     win = null;
