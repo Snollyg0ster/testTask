@@ -31,16 +31,17 @@
       </div>
       <div id="container2">
         <div id="panel">
-          <button id="menu_button"><img src="img/menu.png" /></button>
+          <button id="menu_button" onclick="menu_points(); expand_narrow();">
+            <img src="img/menu.png" />
+          </button>
+          <div id="drop_right">
+            <div id="points"></div>
+          </div>
           <div id="servers">
-            <div id="images">
-              <img class="img" src="img/server.png" />
-              <img class="img" src="img/server.png" />
-              <img class="img" src="img/server.png" />
-            </div>
+            <div id="images"></div>
             <button id="server_add" onclick="server_creation()">+</button>
           </div>
-          <div style="display: flex; justify-content: center">
+          <div id="settings_div">
             <button id="settings_button">
               <img src="img/settings.png" max-width="48" max-height="48" />
             </button>
@@ -128,13 +129,17 @@
     <script>
       require("./renderer.js");
     </script>
+    <script src="script/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./src/servers.js"></script>
     <script src="./src/messages.js"></script>
     <script src="./src/voiceChats.js"></script>
     <script src="./src/textChannels.js"></script>
     <script src="./src/friends.js"></script>
     <script src="./src/toolbar.js"></script>
+    <script src="./src/points.js"></script>
     <script>
+      first_servers();
       first_message();
       first_voice();
       first_chats();
