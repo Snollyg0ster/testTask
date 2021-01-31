@@ -81,6 +81,8 @@
   outline-width: 0 !important;
   margin-left: 6px;
   margin-top: 5px;
+  border-top: 0;
+  border-left: 0;
 }
 
 #settings_div {
