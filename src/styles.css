@@ -20,20 +20,33 @@
 }
 
 #panel {
+  min-width: 60px;
   max-width: 60px;
   background-color: #222;
 }
+
+#drop_right {
+  position: absolute;
+  min-width: 60px;
+  max-width: 60px;
+  height: 500px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+}
+
 #servers {
   overflow-y: auto;
   overflow-x: hidden;
-  max-width: 60px;
   height: 80%;
   padding: 15px;
+  width: 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: #222;
   color: white;
+  opacity: 1;
+  position: relative;
 }
 
 #servers::-webkit-scrollbar {
@@ -59,6 +72,35 @@
   color: white;
   font-weight: bold;
   outline-width: 0;
+}
+
+#menu_button {
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  outline-width: 0 !important;
+  margin-left: 6px;
+  margin-top: 5px;
+  border-top: 0;
+  border-left: 0;
+}
+
+#settings_div {
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 60px;
+}
+
+#settings_button {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  margin-top: 35px;
+  outline-width: 0 !important;
+  padding-right: 6px;
+  border-top: 0;
+  border-left: 0;
 }
 
 #channels {
@@ -226,28 +268,6 @@ input::placeholder {
   color: white;
   border: 0;
   border-color: #444;
-}
-
-#menu_button {
-  background-color: transparent;
-  width: 48px;
-  height: 48px;
-  outline-width: 0 !important;
-  border-top: 0;
-  border-left: 0;
-  margin-left: 6px;
-  margin-top: 5px;
-}
-
-#settings_button {
-  background-color: transparent;
-  width: 40px;
-  height: 40px;
-  margin-top: 35px;
-  outline-width: 0 !important;
-  padding-right: 6px;
-  border-top: 0;
-  border-left: 0;
 }
 
 #button_group {

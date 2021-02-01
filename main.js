@@ -2,7 +2,7 @@ const path = require("path");
 const url = require("url");
 const { app, BrowserWindow, ipcMain } = require("electron");
 
-let win;
+let win, child;
 
 function createWindow() {
   win = new BrowserWindow({
@@ -28,6 +28,8 @@ function createWindow() {
   win.on("closed", () => {
     win = null;
   });
+
+  //win.webContents.openDevTools();
 }
 
 app.on("ready", createWindow);

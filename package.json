@@ -11,6 +11,8 @@
   "dependencies": {
     "antd": "^4.11.2",
     "custom-electron-titlebar": "^3.2.6",
-    "electron": "^11.2.1"
+    "electron": "^11.2.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.5.1"
   }
 }
