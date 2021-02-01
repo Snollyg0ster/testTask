@@ -189,14 +189,16 @@
 }
 
 #input {
+  font-size: 14.4px;
   flex: auto;
-  height: 30px;
+  height: 25px;
   background-color: #444;
   outline-width: 0;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   color: white;
-  border: 0;
+  border: 2px;
+  border-color: #444;
   padding-left: 10px;
   margin-right: 10px;
   overflow: hidden;
@@ -217,7 +219,7 @@ input::placeholder {
   border-bottom-right-radius: 7px;
   border: 0;
   padding-right: 10px;
-  max-height: 30px;
+  max-height: 25px;
 }
 
 #chat-button:active {
