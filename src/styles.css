@@ -200,11 +200,13 @@ input::placeholder {
 }
 
 .message {
+  border: 1px;
+  border-radius: 15px;
   display: flex;
   overflow-y: auto;
   overflow-x: hidden;
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .message_text {
@@ -213,6 +215,8 @@ input::placeholder {
 }
 
 .date {
+  margin-top: 3px;
+  margin-left: 15px;
   font-size: 0.8em;
   color: gray;
 }

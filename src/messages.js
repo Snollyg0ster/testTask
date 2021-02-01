@@ -14,9 +14,10 @@ function message_creation(text) {
   div.innerHTML =
     '<div class="message" id="' +
     Date.now() +
-    '"><img src="img/avatar.png" style="margin-right: 15px;" height="64"><div><h5 class="message_text">Вы написали:</h5><h8 class="date">' +
+    '"><img src="img/avatar.png" style="margin-right: 15px;" height="64">' +
+    '<div><div style="display: flex;"><h5 class="message_text">Вы написали</h5><h8 class="date">' +
     today +
-    '</h8><h6 style="font-family: Arial, Helvetica, sans-serif;">' +
+    '</h8></div><h6 style="font-family: Arial, Helvetica, sans-serif;">' +
     message +
     text +
     "</h6></div></div>";
