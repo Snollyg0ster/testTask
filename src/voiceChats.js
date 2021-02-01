@@ -3,12 +3,12 @@ function voice_channel_creation(text) {
   let div = document.createElement("div");
   let message = document.getElementById("input1").value;
   div.innerHTML =
-    '<div style="display: flex; margin-top: 15px;" id="' +
+    '<div class="channel_item" id="' +
     Date.now() +
-    '"> <div style="color: gray; width: 142px; margin-right: 3px;">' +
+    '"> <div class="channel_item_text">' +
     message +
     text +
-    '</div> <img src="img/voice.svg"> </div>';
+    '</div> <img src="img/voice.svg" style="filter: invert(1) brightness(0.5);"> </div>';
   let input1 = document.getElementById("voice_box");
   if (message != "" || text != "") input1.append(div);
   document.getElementById("input1").value = "";

@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body style="font-family: Arial, Helvetica, sans-serif">
     <div id="elements">
       <div id="container1">
         <div id="button_group">
@@ -97,7 +97,12 @@
 
         <div id="chat">
           <div class="input-group">
-            <input type="text" id="input" placeholder="Написать" />
+            <textarea
+              autofocus="true"
+              type="text"
+              id="input"
+              placeholder="Написать"
+            ></textarea>
             <button id="chat-button" onclick="message_creation()" type="button">
               Отправить
             </button>

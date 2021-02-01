@@ -81,8 +81,11 @@
   outline-width: 0 !important;
   margin-left: 6px;
   margin-top: 5px;
-  border-top: 0;
-  border-left: 0;
+  border: 0;
+}
+
+#menu_button:active {
+  filter: brightness(2);
 }
 
 #settings_div {
@@ -99,8 +102,27 @@
   margin-top: 35px;
   outline-width: 0 !important;
   padding-right: 6px;
-  border-top: 0;
-  border-left: 0;
+  border: 0;
+}
+
+#settings_button:active {
+  filter: brightness(2);
+}
+
+.points_cont {
+  color: gray;
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.menu_points {
+  margin-right: 10px;
+}
+
+.points_cont:hover {
+  color: white;
+  filter: brightness(2);
 }
 
 #channels {
@@ -168,6 +190,7 @@
 
 #input {
   flex: auto;
+  height: 30px;
   background-color: #444;
   outline-width: 0;
   border-top-left-radius: 7px;
@@ -176,6 +199,8 @@
   border: 0;
   padding-left: 10px;
   margin-right: 10px;
+  overflow: hidden;
+  resize: none;
 }
 
 input::placeholder {
@@ -190,13 +215,21 @@ input::placeholder {
   outline-width: 0;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
-  border-left: 1px;
-  border-top: 0;
+  border: 0;
   padding-right: 10px;
+  max-height: 30px;
+}
+
+#chat-button:active {
+  background-color: #333;
 }
 
 .img {
   margin-bottom: 15px;
+}
+
+.img:active {
+  filter: brightness(0.5);
 }
 
 .message {
@@ -206,7 +239,7 @@ input::placeholder {
   overflow-y: auto;
   overflow-x: hidden;
   margin-right: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .message_text {
@@ -217,7 +250,7 @@ input::placeholder {
 .date {
   margin-top: 3px;
   margin-left: 15px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: gray;
 }
 
@@ -250,6 +283,26 @@ input::placeholder {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.channel_item {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.channel_item:active {
+  font-size: 50;
+}
+
+.channel_item_text {
+  color: gray;
+  width: 142px;
+  margin-right: 3px;
+}
+
+.channel_item_text:active {
+  filter: brightness(1);
+}
+
 #invite_button {
   height: 40px;
   width: 100%;
@@ -259,7 +312,11 @@ input::placeholder {
   font-family: Arial, Helvetica, sans-serif;
   outline-width: 0;
   box-shadow: none;
-  border-color: #7188dc;
+  border: 0;
+}
+
+#invite_button:active {
+  background-color: #5168ba;
 }
 
 #search {

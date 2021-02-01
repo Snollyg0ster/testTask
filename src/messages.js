@@ -14,13 +14,13 @@ function message_creation(text) {
   div.innerHTML =
     '<div class="message" id="' +
     Date.now() +
-    '"><img src="img/avatar.png" style="margin-right: 15px;" height="64">' +
-    '<div><div style="display: flex;"><h5 class="message_text">Вы написали</h5><h8 class="date">' +
+    '"><img src="img/avatar.png" style="margin-right: 15px;" height="48px">' +
+    '<div><div style="display: flex;"><h6 class="message_text">Вы написали</h6><h9 class="date">' +
     today +
-    '</h8></div><h6 style="font-family: Arial, Helvetica, sans-serif;">' +
+    '</h9></div><textarea style="overflow: hidden; border: 0;  background-color: transparent; color: white; resize: none; font-size: 0.9em;">' +
     message +
     text +
-    "</h6></div></div>";
+    "</textarea></div></div>";
   let chat = document.getElementById("message_box");
   if (message != "" || text != "") chat.append(div);
   document.getElementById("input").value = "";

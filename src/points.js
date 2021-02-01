@@ -12,11 +12,11 @@ function menu_points() {
     div.innerHTML =
       '<div id="' +
       obj.key +
-      '" style="display: flex; margin-top: 15px; align-items: center;"> <img src="img/' +
+      '" class="points_cont"> <img src="img/' +
       obj.img +
-      '.png" width="32" height="32" style="margin-right: 10px;"> <div style="color: white;">' +
+      '.png" width="32" height="32" class="menu_points">' +
       obj.name +
-      "</div> </div>";
+      "</div>";
     let points = document.getElementById("points");
     points.append(div);
   });
