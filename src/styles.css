@@ -2,6 +2,7 @@
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
+  background-color: black;
 }
 
 #container1 {
@@ -45,7 +46,6 @@
   flex-direction: column;
   background: #222;
   color: white;
-  opacity: 1;
   position: relative;
 }
 
@@ -153,13 +153,20 @@
 #chat {
   flex: auto;
   height: auto;
-  padding: 15px;
-  flex-direction: column-reverse;
+  display: flex;
+  flex-flow: row wrap;
   overflow-y: auto;
   overflow-x: hidden;
   background: #222;
   color: white;
+}
+
+#chat_body {
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
+  flex-direction: column-reverse;
+  padding: 15px;
 }
 
 #chat::-webkit-scrollbar {
@@ -176,10 +183,25 @@
 }
 
 #chat_bar {
-  margin: 0 -15px;
-  margin-top: 0 -15px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
   height: 50px;
   background-color: #333;
+}
+
+.bar_button {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  outline-width: 0 !important;
+  margin: 8px 8px 8px 0px;
+}
+
+.bar_button:active {
+  filter: brightness(1.5);
 }
 
 #members {
@@ -192,12 +214,15 @@
 }
 
 .input-group {
+  margin: 15px;
+  align-self: flex-end;
   min-width: 300px;
   display: flex;
   justify-content: space-between;
 }
 
 #input {
+  justify-self: flex-end;
   font-size: 14.4px;
   flex: auto;
   height: 25px;

@@ -98,6 +98,27 @@
         </div>
 
         <div id="chat">
+          <div id="chat_bar">
+            <button class="bar_button">
+              <img src="img/hide.png" onclick="expand_narr();" />
+            </button>
+          </div>
+          <div
+            style="
+              max-height: 84%;
+              min-height: 84%;
+              width: 100%;
+              display: flex;
+              flex-direction: column-reverse;
+            "
+          >
+            <div id="chat_body">
+              <div
+                id="message_box"
+                style="display: flex; flex-direction: column"
+              ></div>
+            </div>
+          </div>
           <div class="input-group">
             <textarea
               autofocus="true"
@@ -110,11 +131,6 @@
               Отправить
             </button>
           </div>
-          <div
-            id="message_box"
-            style="display: flex; flex-direction: column"
-          ></div>
-          <div id="chat_bar"></div>
         </div>
 
         <div id="members">
