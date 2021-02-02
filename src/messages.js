@@ -28,10 +28,12 @@ function message_creation(text) {
     text +
     "</textarea></div></div>";
   let chat = document.getElementById("message_box");
-  if (message != "" || text != "") chat.append(div);
+  if (message != "" || text != "") {
+    chat.append(div);
+    document.getElementById(text_id).style.height = message_height;
+  }
   document.getElementById("input").value = "";
   document.getElementById("input").style.height = "25px";
-  document.getElementById(text_id).style.height = message_height;
 }
 
 function first_message() {

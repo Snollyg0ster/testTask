@@ -39,7 +39,9 @@
           </div>
           <div id="servers">
             <div id="images"></div>
-            <button id="server_add" onclick="server_creation()">+</button>
+            <button id="server_add" onclick="server_creation()">
+              <img src="img/add.png" />
+            </button>
           </div>
           <div id="settings_div">
             <button id="settings_button">
@@ -112,6 +114,7 @@
             id="message_box"
             style="display: flex; flex-direction: column"
           ></div>
+          <div id="chat_bar"></div>
         </div>
 
         <div id="members">
@@ -144,6 +147,7 @@
     <script src="./src/friends.js"></script>
     <script src="./src/toolbar.js"></script>
     <script src="./src/points.js"></script>
+    <script src="./src/members.js"></script>
     <script>
       first_servers();
       first_message();

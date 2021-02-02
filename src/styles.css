@@ -65,13 +65,15 @@
 #server_add {
   height: 32px;
   width: 32px;
-  border-radius: 16px;
-  outline-color: #555;
-  background-color: #888;
+  background-color: transparent;
   box-shadow: none;
-  color: white;
-  font-weight: bold;
+  border: 0;
   outline-width: 0;
+  padding-left: 0px;
+}
+
+#server_add:active {
+  filter: brightness(0.5);
 }
 
 #menu_button {
@@ -173,6 +175,13 @@
   outline: 1px solid slategrey;
 }
 
+#chat_bar {
+  margin: 0 -15px;
+  margin-top: 0 -15px;
+  height: 50px;
+  background-color: #333;
+}
+
 #members {
   min-width: 200px;
   float: right;
@@ -261,10 +270,12 @@ input::placeholder {
   color: gray;
   border-radius: 7px;
   max-height: 30;
-  border-left: 1px;
-  border-top: 0;
-  border-color: #999 !important;
+  border: 0;
   outline-width: 0 !important;
+}
+
+.channel_button:active {
+  background-color: #333;
 }
 
 .input_channel {
