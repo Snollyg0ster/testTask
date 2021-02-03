@@ -11,9 +11,15 @@ function expand_narr(key) {
       {
         "min-width": "0px",
         "max-width": "0px",
-        padding: "0px",
       },
       200
+    );
+    $("#members_cont").animate(
+      {
+        opacity: "0",
+        padding: "0px",
+      },
+      100
     );
   } else {
     console.log("expand");
@@ -22,26 +28,16 @@ function expand_narr(key) {
       {
         "min-width": "237px",
         "max-width": "237px",
-        padding: "15px",
       },
       200
+    );
+    $("#members_cont").animate(
+      {
+        opacity: "1",
+        padding: "15px",
+      },
+      250
     );
   }
   j++;
 }
-
-// let userCl = true;
-
-// function userClick() {
-//   if (m % 2 == 0) userCl = false;
-//   else userCl = true;
-//   m++;
-// }
-
-// function narrowIf() {
-//   if (userCl == true && isNarrow == false) {
-//     if (isExp == false) expand_narr(1);
-//   } else {
-//     if (isExp == true) expand_narr(0);
-//   }
-// }

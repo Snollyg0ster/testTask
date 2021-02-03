@@ -19,11 +19,11 @@ function message_creation(text) {
     '<div class="message" id="' +
     id +
     '"><img src="img/avatar.png" style="margin-right: 15px;" height="48px">' +
-    '<div><div style="display: flex;"><h6 class="message_text">Вы написали</h6><h9 class="date">' +
+    '<div><div style="display: flex;"><h6 class="message_text">Snolly</h6><h9 class="date">' +
     today +
     '</h9></div><textarea id="' +
     text_id +
-    '" readonly="true" style="overflow: hidden; border: 0; outline-width: 0; background-color: transparent; color: white; resize: none; font-size: 0.9em;">' +
+    '" readonly="true" style="width: 400px; overflow: hidden; border: 0; outline-width: 0; background-color: transparent; color: white; resize: none; font-size: 0.9em;">' +
     message +
     text +
     "</textarea></div></div>";
@@ -46,5 +46,3 @@ $("#input").on("input", function (e) {
 
   this.style.height = this.scrollHeight + 0 + "px";
 });
-
-
