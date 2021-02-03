@@ -19,7 +19,7 @@
   min-height: 97.4vh;
   max-height: 97.4vh;
   background: url(../img/escheresque_ste.png) round;
-  background-size: auto%;
+  background-size: auto;
 }
 
 #panel {
