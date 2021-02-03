@@ -302,7 +302,7 @@ input::placeholder {
 
 .message_border {
   border-radius: 15px;
-  padding: 15px;
+  padding: 12px 12px 0px 12px;
   background-color: #444;
 }
 

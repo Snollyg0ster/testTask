@@ -3,7 +3,10 @@ function message_creation(text) {
   let div = document.createElement("div");
   let message = document.getElementById("input").value;
   let message_height = document.getElementById("input").style.height;
-  console.log(message_height);
+  let length;
+  if (text != "") length = text.length;
+  else length = message.length;
+  if (length > 45) length = 45;
   let id = Date.now(),
     text_id = (id + 1).toString();
 
@@ -23,7 +26,9 @@ function message_creation(text) {
     today +
     '</h9></div><textarea id="' +
     text_id +
-    '" readonly="true" style="width: 250px; overflow: hidden; border: 0; outline-width: 0; background-color: transparent; color: white; resize: none; font-size: 0.9em;">' +
+    '" readonly="true" cols="' +
+    length +
+    '" style="overflow: hidden; border: 0; outline-width: 0; background-color: transparent; color: white; resize: none; font-size: 0.9em;">' +
     message +
     text +
     "</textarea></div></div>";
