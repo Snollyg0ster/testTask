@@ -6,7 +6,7 @@ function message_creation(text) {
   let length;
   if (text != "") length = text.length;
   else length = message.length;
-  if (length > 45) length = 45;
+  if (length > 35) length = 35;
   let id = Date.now(),
     text_id = (id + 1).toString();
 
