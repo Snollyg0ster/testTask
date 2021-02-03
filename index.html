@@ -31,7 +31,10 @@
       </div>
       <div id="container2">
         <div id="panel">
-          <button id="menu_button" onclick="menu_points(); expand_narrow();">
+          <button
+            id="menu_button"
+            onclick="menu_points(); narrowIf(); expand_narrow();"
+          >
             <img src="img/menu.png" />
           </button>
           <div id="drop_right">
@@ -100,7 +103,10 @@
         <div id="chat">
           <div id="chat_bar">
             <button class="bar_button">
-              <img src="img/hide.png" onclick="expand_narr();" />
+              <img src="img/hide.png" onclick="userClick(); narrowIf();" />
+            </button>
+            <button class="bar_button">
+              <img src="img/bell.png" />
             </button>
           </div>
           <div
@@ -164,6 +170,7 @@
     <script src="./src/toolbar.js"></script>
     <script src="./src/points.js"></script>
     <script src="./src/members.js"></script>
+    <script src="./src/intelligentnarrow.js"></script>
     <script>
       first_servers();
       first_message();

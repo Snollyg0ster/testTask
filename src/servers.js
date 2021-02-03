@@ -9,10 +9,12 @@ function first_servers() {
   for (i = 0; i < 3; i++) server_creation();
 }
 
-let k = 0;
+let k = 0,
+  isExpand = false;
 
 function expand_narrow() {
   if (k % 2 == 0) {
+    isExpand = true;
     $("#panel").animate(
       {
         "min-width": "250px",
@@ -34,6 +36,7 @@ function expand_narrow() {
       200
     );
   } else {
+    isExpand = false;
     $("#panel").animate(
       {
         "min-width": "60px",

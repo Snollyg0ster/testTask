@@ -1,10 +1,12 @@
-var j = 0;
+var j = 0,
+  isExp = true;
 
 function expand_narr(key) {
   let b = j;
   if (key != null) b = key;
-  console.log("test");
   if (b % 2 == 0) {
+    console.log("narrow");
+    isExp = false;
     $("#members").animate(
       {
         "min-width": "0px",
@@ -14,6 +16,8 @@ function expand_narr(key) {
       200
     );
   } else {
+    console.log("expand");
+    isExp = true;
     $("#members").animate(
       {
         "min-width": "237px",
@@ -25,3 +29,19 @@ function expand_narr(key) {
   }
   j++;
 }
+
+// let userCl = true;
+
+// function userClick() {
+//   if (m % 2 == 0) userCl = false;
+//   else userCl = true;
+//   m++;
+// }
+
+// function narrowIf() {
+//   if (userCl == true && isNarrow == false) {
+//     if (isExp == false) expand_narr(1);
+//   } else {
+//     if (isExp == true) expand_narr(0);
+//   }
+// }
