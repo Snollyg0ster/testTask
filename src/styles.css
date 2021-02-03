@@ -290,7 +290,6 @@ input::placeholder {
   display: flex;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-right: 15px;
   margin-bottom: 15px;
 }
 

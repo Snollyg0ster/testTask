@@ -5,8 +5,8 @@ let isNarrow = false,
 var ro = new ResizeObserver((entries) => {
   for (let entry of entries) {
     const cr = entry.contentRect;
-    if (isExp == false && cr.width < 552) {
-    } else if (cr.width < 315) {
+    if (isExp == false && cr.width < 620) {
+    } else if (cr.width < 383) {
       isNarrow = true;
       narrowIf();
     } else {
